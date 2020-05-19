@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/demo/DemoWebPart.js",
+          "manifest": "./src/webparts/demo/DemoWebPart.manifest.json"
+        }
+      ]
+    },
+    "announcements-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/announcements/AnnouncementsWebPart.js",
+          "manifest": "./src/webparts/announcements/AnnouncementsWebPart.manifest.json"
+        }
+      ]
+    },
+    "top-performance-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/topPerformance/TopPerformanceWebPart.js",
+          "manifest": "./src/webparts/topPerformance/TopPerformanceWebPart.manifest.json"
+        }
+      ]
+    },
+    "employee-contacts-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/employeeContacts/EmployeeContactsWebPart.js",
+          "manifest": "./src/webparts/employeeContacts/EmployeeContactsWebPart.manifest.json"
+        }
+      ]
+    },
+    "header-footer-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/headerFooter/HeaderFooterApplicationCustomizer.js",
+          "manifest": "./src/extensions/headerFooter/HeaderFooterApplicationCustomizer.manifest.json"
+        }
+      ]
+    },
+    "headquarters-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/headquarters/HeadquartersWebPart.js",
+          "manifest": "./src/webparts/headquarters/HeadquartersWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DemoWebPartStrings": "lib/webparts/demo/loc/{locale}.js",
+    "AnnouncementsWebPartStrings": "lib/webparts/announcements/loc/{locale}.js",
+    "TopPerformanceWebPartStrings": "lib/webparts/topPerformance/loc/{locale}.js",
+    "EmployeeContactsWebPartStrings": "lib/webparts/employeeContacts/loc/{locale}.js",
+    "HeaderFooterApplicationCustomizerStrings": "lib/extensions/headerFooter/loc/{locale}.js",
+    "HeadquartersWebPartStrings": "lib/webparts/headquarters/loc/{locale}.js"
+  }
+}
