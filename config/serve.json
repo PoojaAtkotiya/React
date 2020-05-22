@@ -22,7 +22,7 @@
       }
     },
     "headerFooter": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://esmsyspvt.sharepoint.com/sites/Almatica/sitepages/home.aspx",
       "customActions": {
         "ef8daf45-edf4-4b65-b756-6da0181260c5": {
           "location": "ClientSideExtension.ApplicationCustomizer",

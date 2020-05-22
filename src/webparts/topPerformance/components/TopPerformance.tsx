@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
+
 const commonObj: Common = new Common();
 export default class TopPerformance extends React.Component<ITopPerformanceProps, ITopPerformanceState> {
 
@@ -52,12 +53,12 @@ export default class TopPerformance extends React.Component<ITopPerformanceProps
     return (
       <div>
         <Slider {...settings}>
-          {/* {this.renderTopPerformanceDetails()} */}
+          {this.renderTopPerformanceDetails()}
 
-          <div>1</div>
+          {/* <div>1</div>
           <div>2</div>
           <div>3</div>
-          <div>4</div>
+          <div>4</div> */}
         </Slider>
       </div>
     );

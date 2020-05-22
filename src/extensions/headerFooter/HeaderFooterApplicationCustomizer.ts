@@ -14,7 +14,7 @@ import * as strings from 'HeaderFooterApplicationCustomizerStrings';
 
 const LOG_SOURCE: string = 'HeaderFooterApplicationCustomizer';
 import Header, { IHeaderProps } from "./components/Header";
-import Footer,{IFooterProps} from "./components/Footer";
+import Footer, { IFooterProps } from "./components/Footer";
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -77,16 +77,6 @@ export default class HeaderFooterApplicationCustomizer
 
       const elmt: React.ReactElement<IHeaderProps> = React.createElement(Header);
       ReactDOM.render(elmt, this._topPlaceholder.domElement);
-
-      // if (this._topPlaceholder.domElement) {
-      //   this._topPlaceholder.domElement.innerHTML = `
-      //     <div class="${styles.app}">
-      //       <div class="${styles.top}">
-
-      //       </div>
-      //     </div>`;
-      // }
-      //}
     }
 
     // Handling the bottom placeholder
@@ -104,29 +94,10 @@ export default class HeaderFooterApplicationCustomizer
 
       const footerElmt: React.ReactElement<IFooterProps> = React.createElement(Footer);
       ReactDOM.render(footerElmt, this._bottomPlaceholder.domElement);
-
-
-      //if (this.properties) {
-      // let bottomString: string = this.properties.Bottom;
-      // if (!bottomString) {
-      //   bottomString = "(Bottom property was not defined.)";
-      //}
-
-      // if (this._bottomPlaceholder.domElement) {
-      //   this._bottomPlaceholder.domElement.innerHTML = `
-      //     <div class="${styles.app}">
-      //       <div class="${styles.bottom}">
-      //         <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(
-      //     bottomString
-      //   )}
-      //       </div>
-      //     </div>`;
-      // }
-    //}
+    }
   }
-}
 
   private _onDispose(): void {
-  console.log('[HeaderFooterApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
-}
+    console.log('[HeaderFooterApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
+  }
 }
