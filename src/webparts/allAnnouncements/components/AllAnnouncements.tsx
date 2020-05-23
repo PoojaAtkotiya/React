@@ -1,18 +1,15 @@
 import * as React from 'react';
-import styles from './Announcements.module.scss';
-import { IAnnouncementsProps } from './IAnnouncementsProps';
+import styles from './AllAnnouncements.module.scss';
+import { IAllAnnouncementsProps, IAllAnnouncementsState } from './IAllAnnouncementsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
-import { IAnnouncementsState } from './IAnnouncementsState';
 import Common from '../../common';
-// import { ListNames } from '../../Constants';
 
 
 const commonObj: Common = new Common();
-
 const defaultImgUrl = "/SiteAssets/Images/default.jpg";
-export default class Announcements extends React.Component<IAnnouncementsProps, IAnnouncementsState> {
 
-  constructor(props: IAnnouncementsProps, state: IAnnouncementsState) {
+export default class AllAnnouncements extends React.Component<IAllAnnouncementsProps, IAllAnnouncementsState> {
+  constructor(props: IAllAnnouncementsProps, state: IAllAnnouncementsState) {
     super(props);
     this.state = {
       items: []
@@ -42,7 +39,7 @@ export default class Announcements extends React.Component<IAnnouncementsProps, 
     });
   }
 
-  public render(): React.ReactElement<IAnnouncementsProps> {
+  public render(): React.ReactElement<IAllAnnouncementsProps> {
     return (
 
       <div className={styles.inner + " " + styles.extra}>
@@ -56,9 +53,6 @@ export default class Announcements extends React.Component<IAnnouncementsProps, 
           </div>
         </div>
       </div>
-
-
-
     );
   }
 
@@ -86,7 +80,7 @@ export default class Announcements extends React.Component<IAnnouncementsProps, 
         count++;
         return false;
       }
-      if (count > 0 && count < 5) {
+      if (count > 0) {
         count++;
         return (
           <div className={styles.right_images}>

@@ -46,7 +46,6 @@ export default class HeaderFooterApplicationCustomizer
   @override
   public onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
-
     // Wait for the placeholders to be created (or handle them being changed) and then render.
     this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
 
@@ -75,7 +74,12 @@ export default class HeaderFooterApplicationCustomizer
         return;
       }
 
-      const elmt: React.ReactElement<IHeaderProps> = React.createElement(Header);
+      const elmt: React.ReactElement<IHeaderProps> = React.createElement(
+        Header,
+        {
+          siteUrl: this.context.pageContext.web.absoluteUrl
+        }
+      );
       ReactDOM.render(elmt, this._topPlaceholder.domElement);
     }
 

@@ -49,6 +49,70 @@
           "manifest": "./src/webparts/headquarters/HeadquartersWebPart.manifest.json"
         }
       ]
+    },
+    "corporate-leadership-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/corporateLeadership/CorporateLeadershipWebPart.js",
+          "manifest": "./src/webparts/corporateLeadership/CorporateLeadershipWebPart.manifest.json"
+        }
+      ]
+    },
+    "all-announcements-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/allAnnouncements/AllAnnouncementsWebPart.js",
+          "manifest": "./src/webparts/allAnnouncements/AllAnnouncementsWebPart.manifest.json"
+        }
+      ]
+    },
+    "announcement-details-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/announcementDetails/AnnouncementDetailsWebPart.js",
+          "manifest": "./src/webparts/announcementDetails/AnnouncementDetailsWebPart.manifest.json"
+        }
+      ]
+    },
+    "news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/news/NewsWebPart.js",
+          "manifest": "./src/webparts/news/NewsWebPart.manifest.json"
+        }
+      ]
+    },
+    "all-news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/allNews/AllNewsWebPart.js",
+          "manifest": "./src/webparts/allNews/AllNewsWebPart.manifest.json"
+        }
+      ]
+    },
+    "news-detail-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/newsDetail/NewsDetailWebPart.js",
+          "manifest": "./src/webparts/newsDetail/NewsDetailWebPart.manifest.json"
+        }
+      ]
+    },
+    "leadership-team-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/leadershipTeam/LeadershipTeamWebPart.js",
+          "manifest": "./src/webparts/leadershipTeam/LeadershipTeamWebPart.manifest.json"
+        }
+      ]
+    },
+    "leadership-team-detail-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/leadershipTeamDetail/LeadershipTeamDetailWebPart.js",
+          "manifest": "./src/webparts/leadershipTeamDetail/LeadershipTeamDetailWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -58,6 +122,14 @@
     "TopPerformanceWebPartStrings": "lib/webparts/topPerformance/loc/{locale}.js",
     "EmployeeContactsWebPartStrings": "lib/webparts/employeeContacts/loc/{locale}.js",
     "HeaderFooterApplicationCustomizerStrings": "lib/extensions/headerFooter/loc/{locale}.js",
-    "HeadquartersWebPartStrings": "lib/webparts/headquarters/loc/{locale}.js"
+    "HeadquartersWebPartStrings": "lib/webparts/headquarters/loc/{locale}.js",
+    "CorporateLeadershipWebPartStrings": "lib/webparts/corporateLeadership/loc/{locale}.js",
+    "AllAnnouncementsWebPartStrings": "lib/webparts/allAnnouncements/loc/{locale}.js",
+    "AnnouncementDetailsWebPartStrings": "lib/webparts/announcementDetails/loc/{locale}.js",
+    "NewsWebPartStrings": "lib/webparts/news/loc/{locale}.js",
+    "AllNewsWebPartStrings": "lib/webparts/allNews/loc/{locale}.js",
+    "NewsDetailWebPartStrings": "lib/webparts/newsDetail/loc/{locale}.js",
+    "LeadershipTeamWebPartStrings": "lib/webparts/leadershipTeam/loc/{locale}.js",
+    "LeadershipTeamDetailWebPartStrings": "lib/webparts/leadershipTeamDetail/loc/{locale}.js"
   }
 }

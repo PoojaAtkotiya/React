@@ -1,6 +1,6 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 
-.announcements {
+.news {
   .container {
     max-width: 700px;
     margin: 0px auto;
@@ -71,10 +71,6 @@
       display: inline-block;
     }
   }
-
-}
-div[id="spSiteHeader"] {
-	display: none !important;
 }
 
 
@@ -315,6 +311,7 @@ a {
 	padding-right: 15px;
 	position: relative;
 	z-index: 2;
+	text-transform: uppercase;
 }
 .sub_title {
 	font-size: 16px;
@@ -326,6 +323,7 @@ a {
 	padding-bottom: 15px;
 	position: relative;
 	z-index: 2;
+	text-transform: uppercase;
 }
 
 .company_text a,
@@ -378,6 +376,7 @@ a {
 	position: relative;
 	z-index: 2;
 	box-sizing: border-box;
+	text-transform: uppercase;
 }
 .sub_text {
 	font-size: 16px;
@@ -389,6 +388,7 @@ a {
 	padding-right: 15px;
 	position: relative;
 	z-index: 2;
+	text-transform: uppercase;
 }
 
 .news {
@@ -438,7 +438,7 @@ a {
 .company_text_main {
 	float: left;
 	width: 56.3%;
-	margin-right: 15px;
+	margin-right: 13px;
 }
 .main_people {
 	float: left;
@@ -2469,7 +2469,7 @@ table {
 	.col-lg-9,
 	.col-lg-10,
 	.col-lg-11,
-	.col-lg-12,
+	.col_lg_12,
 	.col-lg-offset-0,
 	.col-lg-offset-1,
 	.col-lg-offset-2,
@@ -2553,7 +2553,7 @@ table {
 		flex-basis: 91.66666667%;
 		max-width: 91.66666667%;
 	}
-	.col-lg-12 {
+	.col_lg_12 {
 		-ms-flex-preferred-size: 100%;
 		flex-basis: 100%;
 		max-width: 100%;
@@ -3319,7 +3319,7 @@ table {
 	.col-lg-9,
 	.col-lg-10,
 	.col-lg-11,
-	.col-lg-12,
+	.col_lg_12,
 	.col-lg-offset-0,
 	.col-lg-offset-1,
 	.col-lg-offset-2,
@@ -3348,7 +3348,7 @@ table {
 	.-gutter-tight > .col-lg-9,
 	.-gutter-tight > .col-lg-10,
 	.-gutter-tight > .col-lg-11,
-	.-gutter-tight > .col-lg-12,
+	.-gutter-tight > .col_lg_12,
 	.-gutter-tight > .col-lg-offset-0,
 	.-gutter-tight > .col-lg-offset-1,
 	.-gutter-tight > .col-lg-offset-2,
@@ -3377,7 +3377,7 @@ table {
 	.-vertical-gutter > .col-lg-9,
 	.-vertical-gutter > .col-lg-10,
 	.-vertical-gutter > .col-lg-11,
-	.-vertical-gutter > .col-lg-12,
+	.-vertical-gutter > .col_lg_12,
 	.-vertical-gutter > .col-lg-offset-0,
 	.-vertical-gutter > .col-lg-offset-1,
 	.-vertical-gutter > .col-lg-offset-2,
@@ -3406,7 +3406,7 @@ table {
 	.-vertical-gutter-wide > .col-lg-9,
 	.-vertical-gutter-wide > .col-lg-10,
 	.-vertical-gutter-wide > .col-lg-11,
-	.-vertical-gutter-wide > .col-lg-12,
+	.-vertical-gutter-wide > .col_lg_12,
 	.-vertical-gutter-wide > .col-lg-offset-0,
 	.-vertical-gutter-wide > .col-lg-offset-1,
 	.-vertical-gutter-wide > .col-lg-offset-2,
@@ -3435,7 +3435,7 @@ table {
 	.-vertical-gutter-tight .col-lg-9,
 	.-vertical-gutter-tight .col-lg-10,
 	.-vertical-gutter-tight .col-lg-11,
-	.-vertical-gutter-tight .col-lg-12,
+	.-vertical-gutter-tight .col_lg_12,
 	.-vertical-gutter-tight .col-lg-offset-0,
 	.-vertical-gutter-tight .col-lg-offset-1,
 	.-vertical-gutter-tight .col-lg-offset-2,

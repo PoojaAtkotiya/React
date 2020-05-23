@@ -1,6 +1,6 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 
-.announcements {
+.newsDetail {
   .container {
     max-width: 700px;
     margin: 0px auto;
@@ -71,11 +71,8 @@
       display: inline-block;
     }
   }
+}
 
-}
-div[id="spSiteHeader"] {
-	display: none !important;
-}
 
 
 .right_banner a > span {
