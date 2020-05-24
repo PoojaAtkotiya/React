@@ -15,13 +15,14 @@ export interface ILeadershipTeamDetailWebPartProps {
   description: string;
 }
 
-export default class LeadershipTeamDetailWebPart extends BaseClientSideWebPart <ILeadershipTeamDetailWebPartProps> {
+export default class LeadershipTeamDetailWebPart extends BaseClientSideWebPart<ILeadershipTeamDetailWebPartProps> {
 
   public render(): void {
     const element: React.ReactElement<ILeadershipTeamDetailProps> = React.createElement(
       LeadershipTeamDetail,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        siteUrl: this.context.pageContext.web.absoluteUrl
       }
     );
 

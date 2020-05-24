@@ -21,7 +21,8 @@ export default class LeadershipTeamWebPart extends BaseClientSideWebPart <ILeade
     const element: React.ReactElement<ILeadershipTeamProps> = React.createElement(
       LeadershipTeam,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        siteUrl:this.context.pageContext.web.absoluteUrl
       }
     );
 

@@ -1,6 +1,10 @@
 div[id="spSiteHeader"] {
 	display: none !important;
 }
+div[class^='simpleFooterContainer_'] {
+    display: none !important;
+}
+
 .footertwocolumn {
 	display: flex;
 	flex-wrap: wrap;

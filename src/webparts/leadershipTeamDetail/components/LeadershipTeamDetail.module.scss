@@ -73,7 +73,12 @@
   }
 }
 
-
+/*24May2020*/
+.leaderImg
+{
+	max-width: 100%;
+	height: auto;
+}
 .right_banner a > span {
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -139,34 +144,34 @@ a {
 
 /*announcement leader-details, leaders,  and news page*/
 
-.two-col-item {
+.twoColItem {
 	width: 50%;
 	box-sizing: border-box;
 }
-.two-col-img {
+.twoColImg {
 	box-sizing: border-box;
 }
-.two-col-cont p:last-child {
+.twoColCont p:last-child {
 	margin-bottom: 0;
 }
 .middle-sec hr {
 	margin: 50px 0;
 }
-.pl-5 {
+.pl5 {
 	padding-left: 5%;
 }
-.leader-details-sec .two-col-img stroung,
-.leader-details-sec .two-col-img em {
+.leaderDetailsSec .twoColImg stroung,
+.leaderDetailsSec .twoColImg em {
 	display: block;
 	font-size: 14px;
 }
-.leader-details-new-sec .two-col-img {
+.leaderDetailsNewSec .twoColImg {
 	width: 25%;
 }
-.leader-details-new-sec .two-col-cont {
+.leaderDetailsNewSec .twoColCont {
 	width: 75%;
 }
-.leader-details-sec .two-col-item.two-col-cont p {
+.leaderDetailsSec .twoColItem.twoColCont p {
 	font-size: 14px;
 	margin-bottom: 10px;
 }
@@ -194,7 +199,7 @@ a {
 	font-size: 13px;
 	line-height: 1.2;
 }
-.page-title.leader-page-title {
+.pageTitle.leaderPageTitle {
 	padding-left: 30%;
 }
 /*announcement leader-details, leaders,  and news page*/
@@ -3926,18 +3931,18 @@ h6.underline:after,
 		font-size: 14px;
 	}
 }
-h1.page-title,
-h2.page-title,
-h3.page-title,
-h4.page-title,
-h5.page-title,
-h6.page-title,
-.h1.page-title,
-.h2.page-title,
-.h3.page-title,
-.h4.page-title,
-.h5.page-title,
-.h6.page-title {
+h1.pageTitle,
+h2.pageTitle,
+h3.pageTitle,
+h4.pageTitle,
+h5.pageTitle,
+h6.pageTitle,
+.h1.pageTitle,
+.h2.pageTitle,
+.h3.pageTitle,
+.h4.pageTitle,
+.h5.pageTitle,
+.h6.pageTitle {
 	margin-top: 0;
 	margin-bottom: 60px;
 }
@@ -5080,8 +5085,8 @@ article .breakout figcaption {
 		font-size: 14px;
 	}
 }
-.banner:not(:first-child) .h1.page-title,
-.body > div > div:not(:first-child) .banner .h1.page-title {
+.banner:not(:first-child) .h1.pageTitle,
+.body > div > div:not(:first-child) .banner .h1.pageTitle {
 	margin-top: 0;
 	margin-bottom: 60px;
 }
@@ -12094,7 +12099,7 @@ a img.management-image {
 a img.management-image:hover {
 	transform: scale(1.1);
 }
-a.go-back.button:hover {
+a.goBack.button:hover {
 	color: #fff;
 }
 .index.pipes > table {
@@ -12239,11 +12244,11 @@ div#product-thumbs-list .thumb-product img:hover {
 .light-gray {
 	background: #f6f2f2;
 }
-.two-col {
+.twoCol {
 	display: flex;
 	flex-wrap: wrap;
 }
-.two-col h4 {
+.twoCol h4 {
 	font-size: 24px;
 }
 .left-col {
@@ -12668,7 +12673,7 @@ div#product-thumbs-list .thumb-product img:hover {
 	.right-col {
 		padding-left: 15px;
 	}
-	.two-col h4 {
+	.twoCol h4 {
 		font-size: 20px;
 	}
 	.profile-round-image img {
@@ -12680,7 +12685,7 @@ div#product-thumbs-list .thumb-product img:hover {
 	.wrap {
 		margin-top: 100px;
 	}
-	.two-col.home-slider-main {
+	.twoCol.home-slider-main {
 		padding: 50px 15px;
 	}
 	.left-col {
@@ -12745,8 +12750,8 @@ div#product-thumbs-list .thumb-product img:hover {
     
     
 	/*performance page*/
-	.two-col .performance-block{width: 100%; margin-right: 0; margin-bottom: 30px;}
-	.two-col .performance-block:last-child{margin-bottom: 0;}    
+	.twoCol .performance-block{width: 100%; margin-right: 0; margin-bottom: 30px;}
+	.twoCol .performance-block:last-child{margin-bottom: 0;}    
 	.top-performers-sec{padding-left: 15px; padding-right: 15px; box-sizing: border-box; margin-bottom: 0;}    
 	/*performance*/ 
 	/*22may2020*/
@@ -12760,28 +12765,28 @@ div#product-thumbs-list .thumb-product img:hover {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.two-col-item.two-col-cont {
+	.twoColItem.twoColCont {
 		padding: 0;
 		order: 2;
 		width: 100%;
 	}
 
-	.two-col-item.two-col-img {
+	.twoColItem.twoColImg {
 		order: 1;
 		padding: 0;
 		width: 100%;
 		margin-bottom: 30px;
 	}
-	.two-col-item.two-col-img img {
+	.twoColItem.twoColImg img {
 		width: 100%;
 	}
 	.body {
 		min-height: inherit;
 	}
-	.leader-details-new-sec .two-col-cont {
+	.leaderDetailsNewSec .twoColCont {
 		width: 100%;
 	}
-	.leader-details-new-sec .two-col-img {
+	.leaderDetailsNewSec .twoColImg {
 		width: 100%;
 	}
 	.contact_high {
@@ -12791,7 +12796,7 @@ div#product-thumbs-list .thumb-product img:hover {
 		text-transform: initial;
 		font-weight: bold;
 	}
-	.page-title.leader-page-title {
+	.pageTitle.leaderPageTitle {
 		padding-left: 0%;
 	}
 

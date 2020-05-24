@@ -1,5 +1,5 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
-
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
 .leadershipTeam {
   .container {
     max-width: 700px;
@@ -7,20 +7,20 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .row {
-    @include ms-Grid-row;
-    @include ms-fontColor-white;
-    background-color: $ms-color-themeDark;
-    padding: 20px;
-  }
+//   .row {
+//     @include ms-Grid-row;
+//     @include ms-fontColor-white;
+//     background-color: $ms-color-themeDark;
+//     padding: 20px;
+//   }
 
-  .column {
-    @include ms-Grid-col;
-    @include ms-lg10;
-    @include ms-xl8;
-    @include ms-xlPush2;
-    @include ms-lgPush1;
-  }
+//   .column {
+//     @include ms-Grid-col;
+//     @include ms-lg10;
+//     @include ms-xl8;
+//     @include ms-xlPush2;
+//     @include ms-lgPush1;
+//   }
 
   .title {
     @include ms-font-xl;
@@ -73,6 +73,20 @@
   }
 }
 
+.row {
+	@include ms-Grid-row;
+	// @include ms-fontColor-white;
+	// background-color: $ms-color-themeDark;
+	padding: 20px;
+}
+.column4 {
+	@include ms-Grid-col;
+	@include ms-sm12;
+	@include ms-md4;
+	@include ms-lg4;
+	@include ms-xl4;
+}
+  
 
 .right_banner a > span {
 	background-position: center center;
@@ -90,28 +104,28 @@
 .right_banner_sub_images {
 	max-height: 109px;
 }
-.leadership-sec img.management-image {
+.leadership-sec img.managementImage {
 	max-height: 276px;
 }
-.leadership-sec .leader-img > a {
+.leadership-sec .leaderImg > a {
 	overflow: hidden;
 	display: block;
 	max-height: 276px;
 	width: 100%;
 }
-.leader-block .caption {
+.leaderBlock .caption {
 	margin-bottom: 0;
 	padding: 15px;
 	background-color: #f3f3f3;
 	font-size: 14px;
 }
-.leader-block p {
+.leaderBlock p {
 	margin-bottom: 0;
 }
-.leader-block p a {
+.leaderBlock p a {
 	text-decoration: none;
 }
-.leader-block p a:hover {
+.leaderBlock p a:hover {
 	color: #000;
 }
 
@@ -119,13 +133,13 @@ a {
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
 }
-.leader-block h4 {
+.leaderBlock h4 {
 	font-size: 18px;
 	margin-bottom: 5px;
 	display: block;
 	text-transform: initial;
 }
-.leader-block em {
+.leaderBlock em {
 	display: block;
 }
 .top-performers-sec {
@@ -170,26 +184,26 @@ a {
 	font-size: 14px;
 	margin-bottom: 10px;
 }
-.bg-cover {
+.bgCover {
 	background-size: cover;
 	background-repeat: no-repeat !important;
 	background-position: center center;
 }
-.bg-cover > img {
+.bgCover > img {
 	opacity: 0;
 	visibility: hidden;
 	width: 100%;
 }
 
-.management-image {
+.managementImage {
 	transition: all 0.2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 }
-.management-image:hover {
+.managementImage:hover {
 	transform: scale(1.1);
 }
-.leader-block em {
+.leaderBlock em {
 	display: block;
 	font-size: 13px;
 	line-height: 1.2;
@@ -206,13 +220,13 @@ a {
 	.right_banner a img {
 		max-height: inherit;
 	}
-	.leadership-sec img.management-image {
+	.leadership-sec img.managementImage {
 		max-height: inherit;
 	}
-	.leadership-sec .leader-img > a {
+	.leadership-sec .leaderImg > a {
 		max-height: inherit;
 	}
-	.leader-block {
+	.leaderBlock {
 		margin-bottom: 30px;
 	}
 	.alavogen_main.leadership-sec {
@@ -12088,10 +12102,10 @@ ul.flex-direction-nav .flex-prev:before {
 	width: 100%;
 	height: 140px;
 }
-a img.management-image {
+a img.managementImage {
 	transition: all 0.2s ease-in-out;
 }
-a img.management-image:hover {
+a img.managementImage:hover {
 	transform: scale(1.1);
 }
 a.go-back.button:hover {
