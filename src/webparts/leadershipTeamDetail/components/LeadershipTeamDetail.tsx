@@ -63,7 +63,7 @@ export default class LeadershipTeamDetail extends React.Component<ILeadershipTea
             </div>
             <div className="two-col-item two-col-cont pl-5">
               <p>{item.About ? item.About : ""}</p>
-              <a href={this.props.siteUrl + '/SitePages/Leadership.aspx'} className="go-back button">Go back</a>
+              <a href={this.props.siteUrl + '/SitePages/Leadershipteam.aspx'} className="go-back button">Go back</a>
             </div>
           </div>
         </div>

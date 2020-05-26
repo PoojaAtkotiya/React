@@ -5,7 +5,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 import Common from '../../common';
 
 const commonObj = new Common();
-const defaultImgUrl = "https://esmsyspvt.sharepoint.com/sites/Almatica/SiteAssets/Images/default.jpg";
+const defaultImgUrl = "/SiteAssets/Images/default.jpg";
 
 
 export default class CorporateLeadership extends React.Component<ICorporateLeadershipProps, ICorporateLeadershipState> {
@@ -61,7 +61,7 @@ export default class CorporateLeadership extends React.Component<ICorporateLeade
         return (
           <div className="left_part">
             <h5 style={{ marginTop: "15px" }}>
-              <img src={item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : defaultImgUrl} alt="" style={{ width: '100%' }} />
+              <img src={item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : this.props.siteUrl + defaultImgUrl} alt="" style={{ width: '100%' }} />
               <span className="contact_high"> {item.PersonName && item.PersonName.Title ? item.PersonName.Title : ""}</span>
             </h5>
             <p>{item.Title ? item.Title : ""}
@@ -96,7 +96,7 @@ export default class CorporateLeadership extends React.Component<ICorporateLeade
               <div className="right_banner_sub_images">
                 <a>
                   {/* <span style={{ backgroundImage: 'url(' + item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : defaultImgUrl + ')' }}></span> */}
-                  <img src={item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : defaultImgUrl} alt="" style={{ width: "100%" }} />
+                  <img src={item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : this.props.siteUrl + defaultImgUrl} alt="" style={{ width: "100%" }} />
                 </a>
               </div>
               <div className="right_banner_1_key_point">
