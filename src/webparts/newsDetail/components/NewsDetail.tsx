@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './NewsDetail.module.scss';
+//import styles from './NewsDetail.module.scss';
 import { INewsDetailProps, INewsDetailState } from './INewsDetailProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import Common from '../../common';
@@ -52,19 +52,19 @@ export default class NewsDetail extends React.Component<INewsDetailProps, INewsD
     return this.state.newsItem.map(item => {
       var imgUrl = item.NewsImage && item.NewsImage.Url ? item.NewsImage.Url : this.props.siteUrl + defaultImgUrl;
       return (
-        <div className={styles.inner + " " + styles.extra}>
-          <div className={styles.centerheader}>
+        <div className="inner extra">
+          <div className="centerheader">
             <h5>{item.NewsCategory ? item.NewsCategory : ""}</h5>
             <h2>{item.Title ? item.Title : ""}</h2>
           </div>
-          <div className={styles.grid + " " + styles.gutter + " " + styles.collapse840}>
-            <div className={styles.col + " " + styles.s3of5}>
+          <div className="grid gutter collapse840">
+            <div className="col s3of5">
               <div>
                 <p>{item.Description ? item.Description : ""}</p>
                 <p></p>
               </div>
             </div>
-            <div className={styles.col + " " + styles.s2of5}>
+            <div className="col s2of5">
               <div>
                 <p><img src={imgUrl} title="" alt="" data-description="" /></p>
               </div>

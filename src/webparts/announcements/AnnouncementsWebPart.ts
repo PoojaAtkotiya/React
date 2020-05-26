@@ -10,12 +10,21 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'AnnouncementsWebPartStrings';
 import Announcements from './components/Announcements';
 import { IAnnouncementsProps } from './components/IAnnouncementsProps';
-
+import { SPComponentLoader } from '@microsoft/sp-loader';
 export interface IAnnouncementsWebPartProps {
   listName: string;
 }
 
 export default class AnnouncementsWebPart extends BaseClientSideWebPart<IAnnouncementsWebPartProps> {
+
+  protected onInit(): Promise<void> {
+    const siteUrl = this.context.pageContext.web.absoluteUrl;
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/main.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/all.min.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/print.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/fonts.css');
+    return super.onInit();
+  }
 
   public render(): void {
     const element: React.ReactElement<IAnnouncementsProps> = React.createElement(

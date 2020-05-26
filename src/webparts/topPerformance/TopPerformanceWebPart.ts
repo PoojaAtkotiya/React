@@ -10,12 +10,24 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'TopPerformanceWebPartStrings';
 import TopPerformance from './components/TopPerformance';
 import { ITopPerformanceProps } from './components/ITopPerformanceProps';
+require('jquery');
+require('owlcarousel');
+import { SPComponentLoader } from '@microsoft/sp-loader';
+
 
 export interface ITopPerformanceWebPartProps {
   listName: string;
 }
 
 export default class TopPerformanceWebPart extends BaseClientSideWebPart<ITopPerformanceWebPartProps> {
+  protected onInit(): Promise<void> {
+    const siteUrl = this.context.pageContext.web.absoluteUrl;
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/main.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/all.min.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/print.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/fonts.css');
+    return super.onInit();
+  }
 
   public render(): void {
     const element: React.ReactElement<ITopPerformanceProps> = React.createElement(

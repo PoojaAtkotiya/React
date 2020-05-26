@@ -10,12 +10,21 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'NewsDetailWebPartStrings';
 import NewsDetail from './components/NewsDetail';
 import { INewsDetailProps } from './components/INewsDetailProps';
-
+import { SPComponentLoader } from '@microsoft/sp-loader';
 export interface INewsDetailWebPartProps {
   description: string;
 }
 
 export default class NewsDetailWebPart extends BaseClientSideWebPart<INewsDetailWebPartProps> {
+
+  protected onInit(): Promise<void> {
+    const siteUrl = this.context.pageContext.web.absoluteUrl;
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/main.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/all.min.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/print.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/fonts.css');
+    return super.onInit();
+  }
 
   public render(): void {
     const element: React.ReactElement<INewsDetailProps> = React.createElement(

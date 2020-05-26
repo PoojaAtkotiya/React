@@ -115,7 +115,16 @@
       ]
     }
   },
-  "externals": {},
+  "externals": {
+    "jquery": {
+      "path": "https://esmsyspvt.sharepoint.com/sites/Almatica/SiteAssets/JS/jquery.min.js",
+      "globalName": "jquery"
+    },
+    "jquerySidebar": "https://esmsyspvt.sharepoint.com/sites/Almatica/SiteAssets/JS/jquery.sidebar.js",
+    "navigation": "https://esmsyspvt.sharepoint.com/sites/Almatica/SiteAssets/JS/navigation.js",
+    "owlcarousel": "https://esmsyspvt.sharepoint.com/sites/Almatica/SiteAssets/JS/owl.carousel.min.js",
+    "custom": "https://esmsyspvt.sharepoint.com/sites/Almatica/SiteAssets/JS/custom.js"
+  },
   "localizedResources": {
     "DemoWebPartStrings": "lib/webparts/demo/loc/{locale}.js",
     "AnnouncementsWebPartStrings": "lib/webparts/announcements/loc/{locale}.js",

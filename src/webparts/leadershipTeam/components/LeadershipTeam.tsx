@@ -44,8 +44,8 @@ export default class LeadershipTeam extends React.Component<ILeadershipTeamProps
 
   public render(): React.ReactElement<ILeadershipTeamProps> {
     return (
-      <div className={styles.inner + " " + styles.extra}>
-        <div className={styles.centerheader}>
+      <div className="inner extra">
+        <div className="centerheader">
           <h2>Leadership Team</h2>
         </div>
         <div className="ms-Grid">
@@ -55,9 +55,6 @@ export default class LeadershipTeam extends React.Component<ILeadershipTeamProps
             </div>
           </div>
         </div>
-        {/* <div className={styles.grid + ' ' + styles.gutter + ' ' + styles.collapse840}>
-          {this.renderColumn()}
-        </div > */}
       </div >
     );
   }
@@ -68,22 +65,22 @@ export default class LeadershipTeam extends React.Component<ILeadershipTeamProps
     var leaderImg = item.LeaderImage && item.LeaderImage.Url ? item.LeaderImage.Url : item.siteUrl + defaultImgUrl;
     var loginUserEmail = item.LeaderName && item.LeaderName.EMail ? item.LeaderName.EMail : "";
     return (
-      <div className={styles.column4 + ' ' + styles.col + ' ' + styles.s1of3} style={{ marginBottom: '10px' }}>
+      <div className={styles.column4 + ' col s1of3'} style={{ marginBottom: '10px' }}>
         {/* <div className={styles.col + ' ' + styles.s1of3}> */}
-        <div className={styles.leaderBlock}>
-          <div className={styles.leaderImg}>
-            <a href={item.siteUrl + "/SitePages/LeadershipDetail.aspx?itemID=" + item.ID}>
-              <div className={styles.bgCover + ' ' + styles.managementImage} style={{ backgroundImage: 'url(' + leaderImg + ')' }}>
+        <div className="leader-block">
+          <div className="leader-img">
+            <a href={item.siteUrl + "/SitePages/LeadershipDetail.aspx?itemId=" + item.ID}>
+              <div className="bg-cover management-image" style={{ backgroundImage: 'url(' + leaderImg + ')' }}>
                 <img src={item.siteUrl + '/SiteAssets/Images/placeholder/10-10.png'} alt="" />
               </div>
             </a>
           </div>
-          <div className={styles.caption}>
+          <div className="caption">
             <h4> {item.LeaderName && item.LeaderName.Title ? item.LeaderName.Title : ""}</h4>
             <p><em>{item.Title ? item.Title : ''}</em>
               {loginUserEmail ? <a href={'mailto:' + loginUserEmail}>E-mail</a> : ""}
               {loginUserEmail ? " | " : ""}
-              <a href={item.siteUrl + "/SitePages/LeadershipDetail.aspx?itemID=" + item.ID}>Read More ... </a>
+              <a href={item.siteUrl + "/SitePages/LeadershipDetail.aspx?itemId=" + item.ID}>Read More ... </a>
             </p>
           </div>
         </div>

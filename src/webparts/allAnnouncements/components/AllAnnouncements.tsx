@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './AllAnnouncements.module.scss';
+//import styles from './AllAnnouncements.module.scss';
 import { IAllAnnouncementsProps, IAllAnnouncementsState } from './IAllAnnouncementsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import Common from '../../common';
@@ -42,13 +42,13 @@ export default class AllAnnouncements extends React.Component<IAllAnnouncementsP
   public render(): React.ReactElement<IAllAnnouncementsProps> {
     return (
 
-      <div className={styles.inner + " " + styles.extra}>
-        <div className={styles.centerheader}>
+      <div className="inner extra">
+        <div className="centerheader">
           <h2>ANNOUNCEMENTS</h2>
         </div>
-        <div className={styles.box_main}>
+        <div className="box_main">
           {this.renderLeftItem()}
-          <div className={styles.right_part}>
+          <div className="right_part">
             {this.renderRightItems()}
           </div>
         </div>
@@ -62,9 +62,9 @@ export default class AllAnnouncements extends React.Component<IAllAnnouncementsP
       if (count == 0) {
         count++;
         return (
-          <div className={styles.left_part}>
+          <div className="left_part">
             <a href={this.props.siteUrl + "/SitePages/AnnouncementDetail.aspx?itemId=" + item.ID}><img src={item.Picture && item.Picture.Url ? item.Picture.Url : this.props.siteUrl + defaultImgUrl} alt="" style={{ width: '100%' }} /></a>
-            <h5 style={{ marginTop: "15px;" }}>{item.Title ? <a href={this.props.siteUrl + "/SitePages/AnnouncementDetail.aspx?itemId=" + item.ID}>{item.Title}</a> : ""}</h5>
+            <h5 style={{ marginTop: "15px" }}>{item.Title ? <a href={this.props.siteUrl + "/SitePages/AnnouncementDetail.aspx?itemId=" + item.ID}>{item.Title}</a> : ""}</h5>
             <p>{item.Description ? commonObj.truncate(item.Description, 200) : ""}</p>
           </div>
         );
@@ -82,18 +82,19 @@ export default class AllAnnouncements extends React.Component<IAllAnnouncementsP
       }
       if (count > 0) {
         count++;
+        var imgUrl = item.Picture && item.Picture.Url ? item.Picture.Url : this.props.siteUrl + defaultImgUrl;
         return (
-          <div className={styles.right_images}>
-            <div className={styles.right_images}>
-              <div className={styles.right_banner}>
+          <div className="right_images">
+            <div className="right_images">
+              <div className="right_banner">
                 <a href={this.props.siteUrl + "/SitePages/AnnouncementDetail.aspx?itemId=" + item.ID}>
-                  <img src={item.Picture && item.Picture.Url ? item.Picture.Url : this.props.siteUrl + defaultImgUrl} alt="" style={{ width: "100%" }} />
-                  {/* <span style={{ backgroundImage: 'url(https://esmsyspvt.sharepoint.com/:i:/r/sites/Almatica/SiteAssets/Images/emily-smith.jpg?csf=1&web=1&e=O8KqQM)' }}></span> */}
+                  {/* <img src={item.Picture && item.Picture.Url ? item.Picture.Url : this.props.siteUrl + defaultImgUrl} alt="" style={{ width: "100%" }} /> */}
+                  <span style={{ backgroundImage: 'url(' + imgUrl + ')' }}></span>
                 </a>
               </div>
-              <div className={styles.right_banner_1}>
-                <div className={styles.future_work_1}><a href={this.props.siteUrl + "/SitePages/AnnouncementDetail.aspx?itemId=" + item.ID} style={{ textDecoration: 'none', color: '#000' }}>{item.Title ? item.Title : ""}</a></div>
-                <div className={styles.future_work}> {item.Description ? commonObj.truncate(item.Description, 50) : ""}</div>
+              <div className="right_banner_1">
+                <div className="future_work_1"><a href={this.props.siteUrl + "/SitePages/AnnouncementDetail.aspx?itemId=" + item.ID} style={{ textDecoration: 'none', color: '#000' }}>{item.Title ? item.Title : ""}</a></div>
+                <div className="future_work"> {item.Description ? commonObj.truncate(item.Description, 50) : ""}</div>
               </div>
             </div>
           </div>

@@ -10,12 +10,21 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'LeadershipTeamWebPartStrings';
 import LeadershipTeam from './components/LeadershipTeam';
 import { ILeadershipTeamProps } from './components/ILeadershipTeamProps';
-
+import { SPComponentLoader } from '@microsoft/sp-loader';
 export interface ILeadershipTeamWebPartProps {
   description: string;
 }
 
 export default class LeadershipTeamWebPart extends BaseClientSideWebPart <ILeadershipTeamWebPartProps> {
+
+  protected onInit(): Promise<void> {
+    const siteUrl = this.context.pageContext.web.absoluteUrl;
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/main.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/all.min.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/print.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/fonts.css');
+    return super.onInit();
+  }
 
   public render(): void {
     const element: React.ReactElement<ILeadershipTeamProps> = React.createElement(

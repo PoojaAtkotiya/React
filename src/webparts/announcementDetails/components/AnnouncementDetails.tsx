@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './AnnouncementDetails.module.scss';
+//import styles from './AnnouncementDetails.module.scss';
 import { IAnnouncementDetailsProps, IAnnouncementDetailsState } from './IAnnouncementDetailsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import Common from '../../common';
@@ -48,18 +48,18 @@ export default class AnnouncementDetails extends React.Component<IAnnouncementDe
   private renderAnnouncement() {
     return this.state.announcementItem.map(item => {
       return(
-      <div className={styles.inner + " " + styles.extra + " " + styles.nobottompadding}>
-        <div className={styles.centerheader}>
+      <div className="inner extra nobottompadding">
+        <div className="centerheader">
           {/* <h5>New Arrivals</h5> */}
           <h2>{item.Title ? item.Title : ""}</h2>
         </div>
-        <div className={styles.grid + " " + styles.gutter + " " + styles.collapse840}>
-          <div className={styles.col + " " + styles.s1of2}>
+        <div className="grid gutter collapse840">
+          <div className="col s1of2">
             <div>
               <p>{item.Description ? item.Description : ""} </p>
             </div>
           </div>
-          <div className={styles.col + " " + styles.s1of2}>
+          <div className="col s1of2">
             <div>
               <p><img src={item.Picture && item.Picture.Url ? item.Picture.Url : this.props.siteUrl + defaultImgUrl} title="" alt=""
                 data-description="" /></p>

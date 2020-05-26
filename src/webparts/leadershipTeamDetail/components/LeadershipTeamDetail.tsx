@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './LeadershipTeamDetail.module.scss';
+//import styles from './LeadershipTeamDetail.module.scss';
 import { ILeadershipTeamDetailProps, ILeadershipTeamDetailState } from './ILeadershipTeamDetailProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import Common from '../../common';
@@ -51,19 +51,19 @@ export default class LeadershipTeamDetail extends React.Component<ILeadershipTea
     return this.state.leaderItem.map(item => {
       var leaderImg = item.LeaderImage && item.LeaderImage.Url ? item.LeaderImage.Url : this.props.siteUrl + defaultImgUrl;
       return (
-        <div className={styles.inner + ' ' + styles.extra}>
-          <div className={styles.pageTitle + ' ' + styles.leaderPageTitle}>
+        <div className="inner extra">
+          <div className="page-title leader-page-title">
             <h2><strong>{item.LeaderName && item.LeaderName.Title ? item.LeaderName.Title : ""}</strong></h2>
           </div>
-          <div className={styles.twoCol + ' ' + styles.leaderDetailsSec + ' ' + styles.leaderDetailsNewSec}>
-            <div className={styles.twoColItem + ' ' + styles.twoColImg}>
-              <img className={styles.leaderImg} src={leaderImg} title="" alt="" data-description="" />
+          <div className="two-col leader-details-sec leader-details-new-sec">
+            <div className="two-col-item two-col-img">
+              <img className="leaderImg" src={leaderImg} title="" alt="" data-description="" />
               <strong>{item.LeaderName && item.LeaderName.Title ? item.LeaderName.Title : ""}</strong>
               <em>{item.Title ? item.Title : ""}</em>
             </div>
-            <div className={styles.twoColItem + ' ' + styles.twoColCont + ' ' + styles.pl5}>
+            <div className="two-col-item two-col-cont pl-5">
               <p>{item.About ? item.About : ""}</p>
-              <a href={this.props.siteUrl + '/SitePages/Leadership.aspx'} className={styles.goBack + ' ' + styles.button}>Go back</a>
+              <a href={this.props.siteUrl + '/SitePages/Leadership.aspx'} className="go-back button">Go back</a>
             </div>
           </div>
         </div>

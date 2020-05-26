@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './CorporateLeadership.module.scss';
+//import styles from './CorporateLeadership.module.scss';
 import { ICorporateLeadershipProps, ICorporateLeadershipState } from './ICorporateLeadershipProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import Common from '../../common';
@@ -38,14 +38,14 @@ export default class CorporateLeadership extends React.Component<ICorporateLeade
 
   public render(): React.ReactElement<ICorporateLeadershipProps> {
     return (
-      
-      <div className={styles.inner + " " + styles.extra}>
-        <div className={styles.centerheader}>
+
+      <div className="inner extra">
+        <div className="centerheader">
           <h2>Corporate Leadership and HQ List</h2>
         </div>
-        <div className={styles.box_main}>
+        <div className="box_main">
           {this.renderLeftItem()}
-          <div className={styles.right_part}>
+          <div className="right_part">
             {this.renderRightItems()}
           </div>
         </div>
@@ -59,10 +59,10 @@ export default class CorporateLeadership extends React.Component<ICorporateLeade
       if (count == 0) {
         count++;
         return (
-          <div className={styles.left_part}>
-            <h5 style={{ marginTop: "15px;" }}>
+          <div className="left_part">
+            <h5 style={{ marginTop: "15px" }}>
               <img src={item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : defaultImgUrl} alt="" style={{ width: '100%' }} />
-              <span className={styles.contact_high}> {item.PersonName && item.PersonName.Title ? item.PersonName.Title : ""}</span>
+              <span className="contact_high"> {item.PersonName && item.PersonName.Title ? item.PersonName.Title : ""}</span>
             </h5>
             <p>{item.Title ? item.Title : ""}
               <br />
@@ -91,19 +91,19 @@ export default class CorporateLeadership extends React.Component<ICorporateLeade
       if (count > 0 && count < 5) {
         count++;
         return (
-          <div className={styles.right_images}>
-            <div className={styles.right_images}>
-              <div className={styles.right_banner_sub_images}>
+          <div className="right_images">
+            <div className="right_images">
+              <div className="right_banner_sub_images">
                 <a>
                   {/* <span style={{ backgroundImage: 'url(' + item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : defaultImgUrl + ')' }}></span> */}
                   <img src={item.PersonImage && item.PersonImage.Url ? item.PersonImage.Url : defaultImgUrl} alt="" style={{ width: "100%" }} />
                 </a>
               </div>
-              <div className={styles.right_banner_1_key_point}>
-                <div className={styles.future_work_1}>
+              <div className="right_banner_1_key_point">
+                <div className="future_work_1">
                   {item.PersonName && item.PersonName.Title ? item.PersonName.Title : ""}
                 </div>
-                <div className={styles.future_work}>
+                <div className="future_work">
                   {item.Title ? item.Title : ""}
                   <br />
                   {item.PersonName && item.PersonName.EMail ?

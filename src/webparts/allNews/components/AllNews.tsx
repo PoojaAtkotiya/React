@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './AllNews.module.scss';
+//import styles from './AllNews.module.scss';
 import { IAllNewsProps, IAllNewsState } from './IAllNewsProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import Common from '../../common';
@@ -37,26 +37,26 @@ export default class AllNews extends React.Component<IAllNewsProps, IAllNewsStat
 
   public render(): React.ReactElement<IAllNewsProps> {
     return (
-      <div className={styles.inner + " " + styles.extra}>
-        <div className={styles.centerheader}>
+      <div className="inner extra">
+        <div className="centerheader">
           <h2>News</h2>
         </div>
-        <div className={styles.box_main}>
-          <div className={styles.company_text_main}>
+        <div className="box_main">
+          <div className="company_text_main">
             {this.renderLeftNewsItem()}
           </div>
-          <div className={styles.main_people}>
-            <div className={styles.row}>
+          <div className="main_people">
+            <div className="row">
               {this.renderRightNews()}
 
-              {/* <div className={styles.col_lg_12}>
-                <div className={styles.news}>
-                  <div className={styles.blog_text_title}><a href="#">-CEO BLOG</a></div>
-                  <div className={styles.blog_text_title_1}><a href="#">A MESSAGE TO YOU DURING THIS CHALLENGING TIME OF COVID - 19</a></div>
-                  <div className={styles.blog_text_title}><a href="#">-COMPANY</a></div>
-                  <div className={styles.blog_text_title_1}><a href="#">LOTUS ANNOUNCE NEW GLOBAL PARTNERSHIPS TO DRIVE GROWTH</a></div>
-                  <div className={styles.blog_text_title}><a href="#">-COMPANY</a></div>
-                  <div className={styles.blog_text_title_1}><a href="#">LOTUS QUALITY SYSTEMS & COMPLIANCE</a></div>
+              {/* <div className="col_lg_12}>
+                <div className="news}>
+                  <div className="blog_text_title}><a href="#">-CEO BLOG</a></div>
+                  <div className="blog_text_title_1}><a href="#">A MESSAGE TO YOU DURING THIS CHALLENGING TIME OF COVID - 19</a></div>
+                  <div className="blog_text_title}><a href="#">-COMPANY</a></div>
+                  <div className="blog_text_title_1}><a href="#">LOTUS ANNOUNCE NEW GLOBAL PARTNERSHIPS TO DRIVE GROWTH</a></div>
+                  <div className="blog_text_title}><a href="#">-COMPANY</a></div>
+                  <div className="blog_text_title_1}><a href="#">LOTUS QUALITY SYSTEMS & COMPLIANCE</a></div>
                 </div>
               </div> */}
             </div>
@@ -73,9 +73,9 @@ export default class AllNews extends React.Component<IAllNewsProps, IAllNewsStat
         count++;
         var imgUrl = item.NewsImage && item.NewsImage.Url ? item.NewsImage.Url : this.props.siteUrl + defaultImgUrl;
         return (
-          <div className={styles.company_main} style={{ backgroundImage: 'url(' + imgUrl + ')' }}>
-            <div className={styles.company_text}><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemID=" + item.ID}>{item.NewsCategory ? item.NewsCategory : ""}</a></div>
-            <div className={styles.sub_title}><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemID=" + item.ID}>{item.Title ? item.Title : ""}</a></div>
+          <div className="company_main" style={{ backgroundImage: 'url(' + imgUrl + ')' }}>
+            <div className="company_text"><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemId=" + item.ID}>{item.NewsCategory ? item.NewsCategory : ""}</a></div>
+            <div className="sub_title"><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemId=" + item.ID}>{item.Title ? item.Title : ""}</a></div>
           </div>
         );
       }
@@ -92,10 +92,10 @@ export default class AllNews extends React.Component<IAllNewsProps, IAllNewsStat
         count++;
         var imgUrl = item.NewsImage && item.NewsImage.Url ? item.NewsImage.Url : this.props.siteUrl + defaultImgUrl;
         return (
-          <div className={styles.col_lg_12}>
-            <div className={styles.people_main} style={{ backgroundImage: 'url(' + imgUrl + ')' }}>
-              <div className={styles.people_text}><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemID=" + item.ID}>{item.NewsCategory ? item.NewsCategory : ""} </a></div>
-              <div className={styles.sub_text}><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemID=" + item.ID}>{item.Title ? item.Title : ""}</a></div>
+          <div className="col-lg-12">
+            <div className="people_main" style={{ backgroundImage: 'url(' + imgUrl + ')' }}>
+              <div className="people_text"><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemId=" + item.ID}>{item.NewsCategory ? item.NewsCategory : ""} </a></div>
+              <div className="sub_text"><a href={this.props.siteUrl + "/sitepages/NewsDetail.aspx?itemId=" + item.ID}>{item.Title ? item.Title : ""}</a></div>
             </div>
           </div>
         );

@@ -18,9 +18,12 @@ import Footer, { IFooterProps } from "./components/Footer";
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-// require('./components/main.css');
-require('./components/print.css');
-require('./components/fonts.css');
+import { SPComponentLoader } from '@microsoft/sp-loader';
+require('jquery');
+require('jquerySidebar');
+require('navigation');
+require('owlcarousel');
+require('custom');
 
 /**
  * If your command set uses the ClientSideComponentProperties JSON input,
@@ -39,6 +42,7 @@ export default class HeaderFooterApplicationCustomizer
   extends BaseApplicationCustomizer<IHeaderFooterApplicationCustomizerProperties> {
 
 
+
   // These have been added
   private _topPlaceholder: PlaceholderContent | undefined;
   private _bottomPlaceholder: PlaceholderContent | undefined;
@@ -48,7 +52,13 @@ export default class HeaderFooterApplicationCustomizer
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
     // Wait for the placeholders to be created (or handle them being changed) and then render.
     this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
-
+    const siteUrl = this.context.pageContext.web.absoluteUrl;
+    ////load all requried css in header and footer
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/main.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/owl.carousel.min.cs');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/all.min.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/print.css');
+    SPComponentLoader.loadCss(siteUrl+'/SiteAssets/css/fonts.css');
     return Promise.resolve();
   }
 
